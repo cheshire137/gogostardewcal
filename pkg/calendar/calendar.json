@@ -1,393 +1,407 @@
 {
-  "spring": [
-    [],
-    [],
-    [],
-    [
-      {
-        "type": "birthday",
-        "person": "Kent"
-      }
-    ],
-    [],
-    [],
-    [
-      {
-        "type": "birthday",
-        "person": "Lewis"
-      }
-    ],
-    [],
-    [],
-    [
-      {
-        "type": "birthday",
-        "person": "Vincent"
-      }
-    ],
-    [],
-    [],
-    [
-      {
-        "type": "festival",
-        "name": "Egg Festival"
-      }
-    ],
-    [
-      {
-        "type": "birthday",
-        "person": "Haley"
-      }
-    ],
-    [
-      {
-        "type": "other",
-        "name": "Salmonberry Season"
-      }
-    ],
-    [
-      {
-        "type": "other",
-        "name": "Salmonberry Season"
-      }
-    ],
-    [
-      {
-        "type": "other",
-        "name": "Salmonberry Season"
-      }
-    ],
-    [
-      {
-        "type": "birthday",
-        "person": "Pam"
-      },
-      {
-        "type": "other",
-        "name": "Salmonberry Season"
-      }
-    ],
-    [],
-    [
-      {
-        "type": "birthday",
-        "person": "Shane"
-      }
-    ],
-    [],
-    [],
-    [],
-    [
-      {
-        "type": "festival",
-        "name": "Flower Dance"
-      }
-    ],
-    [],
-    [
-      {
-        "type": "birthday",
-        "person": "Pierre"
-      }
-    ],
-    [
-      {
-        "type": "birthday",
-        "person": "Emily"
-      }
-    ],
-    []
-  ],
-  "summer": [
-    [],
-    [],
-    [],
-    [
-      {
-        "type": "birthday",
-        "person": "Jas"
-      }
-    ],
-    [],
-    [],
-    [],
-    [
-      {
-        "type": "birthday",
-        "person": "Gus"
-      }
-    ],
-    [],
-    [
-      {
-        "type": "birthday",
-        "person": "Maru"
-      }
-    ],
-    [
-      {
-        "type": "festival",
-        "name": "Luau"
-      }
-    ],
-    [
-      {
-        "type": "other",
-        "name": "Extra shells on beach"
-      }
-    ],
-    [
-      {
-        "type": "birthday",
-        "person": "Alex"
-      },
-      {
-        "type": "other",
-        "name": "Extra shells on beach"
-      }
-    ],
-    [
-      {
-        "type": "other",
-        "name": "Extra shells on beach"
-      }
-    ],
-    [],
-    [],
-    [
-      {
-        "type": "birthday",
-        "person": "Sam"
-      }
-    ],
-    [],
-    [
-      {
-        "type": "birthday",
-        "person": "Demetrius"
-      }
-    ],
-    [],
-    [],
-    [
-      {
-        "type": "birthday",
-        "person": "Dwarf"
-      }
-    ],
-    [],
-    [
-      {
-        "type": "birthday",
-        "person": "Willy"
-      }
-    ],
-    [],
-    [],
-    [],
-    [
-      {
-        "type": "festival",
-        "name": "Dance of the Moonlight Jellies"
-      }
-    ]
-  ],
-  "fall": [
-    [],
-    [
-      {
-        "type": "birthday",
-        "person": "Penny"
-      }
-    ],
-    [],
-    [],
-    [
-      {
-        "type": "birthday",
-        "person": "Elliott"
-      }
-    ],
-    [],
-    [],
-    [
-      {
-        "type": "other",
-        "name": "Blackberry Season"
-      }
-    ],
-    [
-      {
-        "type": "other",
-        "name": "Blackberry Season"
-      }
-    ],
-    [
-      {
-        "type": "other",
-        "name": "Blackberry Season"
-      }
-    ],
-    [
-      {
-        "type": "birthday",
-        "person": "Jodi"
-      },
-      {
-        "type": "other",
-        "name": "Blackberry Season"
-      }
-    ],
-    [],
-    [
-      {
-        "type": "birthday",
-        "person": "Abigail"
-      }
-    ],
-    [],
-    [
-      {
-        "type": "birthday",
-        "person": "Sandy"
-      }
-    ],
-    [
-      {
-        "type": "festival",
-        "name": "Stardew Valley Fair"
-      }
-    ],
-    [],
-    [
-      {
-        "type": "birthday",
-        "person": "Marnie"
-      }
-    ],
-    [],
-    [],
-    [
-      {
-        "type": "birthday",
-        "person": "Robin"
-      }
-    ],
-    [],
-    [],
-    [
-      {
-        "type": "birthday",
-        "person": "George"
-      }
-    ],
-    [],
-    [],
-    [
-      {
-        "type": "festival",
-        "name": "Spirit's Eve"
-      }
-    ],
-    []
-  ],
-  "winter": [
-    [
-      {
-        "type": "birthday",
-        "person": "Krobus"
-      }
-    ],
-    [],
-    [
-      {
-        "type": "birthday",
-        "person": "Linus"
-      }
-    ],
-    [],
-    [],
-    [],
-    [
-      {
-        "type": "birthday",
-        "person": "Caroline"
-      }
-    ],
-    [
-      {
-        "type": "festival",
-        "name": "Festival of Ice"
-      }
-    ],
-    [],
-    [
-      {
-        "type": "birthday",
-        "person": "Sebastian"
-      }
-    ],
-    [],
-    [],
-    [],
-    [
-      {
-        "type": "birthday",
-        "person": "Harvey"
-      }
-    ],
-    [
-      {
-        "type": "festival",
-        "name": "Night Market"
-      }
-    ],
-    [
-      {
-        "type": "festival",
-        "name": "Night Market"
-      }
-    ],
-    [
-      {
-        "type": "birthday",
-        "person": "Wizard"
-      },
-      {
-        "type": "festival",
-        "name": "Night Market"
-      }
-    ],
-    [],
-    [],
-    [
-      {
-        "type": "birthday",
-        "person": "Evelyn"
-      }
-    ],
-    [],
-    [],
-    [
-      {
-        "type": "birthday",
-        "person": "Leah"
-      }
-    ],
-    [],
-    [
-      {
-        "type": "festival",
-        "name": "Feast of the Winter Star"
-      }
-    ],
-    [
-      {
-        "type": "birthday",
-        "person": "Clint"
-      }
-    ],
-    [],
-    []
+  "seasons": [
+    {
+      "name": "spring",
+      "days": [
+        [],
+        [],
+        [],
+        [
+          {
+            "type": "birthday",
+            "person": "Kent"
+          }
+        ],
+        [],
+        [],
+        [
+          {
+            "type": "birthday",
+            "person": "Lewis"
+          }
+        ],
+        [],
+        [],
+        [
+          {
+            "type": "birthday",
+            "person": "Vincent"
+          }
+        ],
+        [],
+        [],
+        [
+          {
+            "type": "festival",
+            "name": "Egg Festival"
+          }
+        ],
+        [
+          {
+            "type": "birthday",
+            "person": "Haley"
+          }
+        ],
+        [
+          {
+            "type": "other",
+            "name": "Salmonberry Season"
+          }
+        ],
+        [
+          {
+            "type": "other",
+            "name": "Salmonberry Season"
+          }
+        ],
+        [
+          {
+            "type": "other",
+            "name": "Salmonberry Season"
+          }
+        ],
+        [
+          {
+            "type": "birthday",
+            "person": "Pam"
+          },
+          {
+            "type": "other",
+            "name": "Salmonberry Season"
+          }
+        ],
+        [],
+        [
+          {
+            "type": "birthday",
+            "person": "Shane"
+          }
+        ],
+        [],
+        [],
+        [],
+        [
+          {
+            "type": "festival",
+            "name": "Flower Dance"
+          }
+        ],
+        [],
+        [
+          {
+            "type": "birthday",
+            "person": "Pierre"
+          }
+        ],
+        [
+          {
+            "type": "birthday",
+            "person": "Emily"
+          }
+        ],
+        []
+      ]
+    },
+    {
+      "name": "summer",
+      "days": [
+        [],
+        [],
+        [],
+        [
+          {
+            "type": "birthday",
+            "person": "Jas"
+          }
+        ],
+        [],
+        [],
+        [],
+        [
+          {
+            "type": "birthday",
+            "person": "Gus"
+          }
+        ],
+        [],
+        [
+          {
+            "type": "birthday",
+            "person": "Maru"
+          }
+        ],
+        [
+          {
+            "type": "festival",
+            "name": "Luau"
+          }
+        ],
+        [
+          {
+            "type": "other",
+            "name": "Extra shells on beach"
+          }
+        ],
+        [
+          {
+            "type": "birthday",
+            "person": "Alex"
+          },
+          {
+            "type": "other",
+            "name": "Extra shells on beach"
+          }
+        ],
+        [
+          {
+            "type": "other",
+            "name": "Extra shells on beach"
+          }
+        ],
+        [],
+        [],
+        [
+          {
+            "type": "birthday",
+            "person": "Sam"
+          }
+        ],
+        [],
+        [
+          {
+            "type": "birthday",
+            "person": "Demetrius"
+          }
+        ],
+        [],
+        [],
+        [
+          {
+            "type": "birthday",
+            "person": "Dwarf"
+          }
+        ],
+        [],
+        [
+          {
+            "type": "birthday",
+            "person": "Willy"
+          }
+        ],
+        [],
+        [],
+        [],
+        [
+          {
+            "type": "festival",
+            "name": "Dance of the Moonlight Jellies"
+          }
+        ]
+      ]
+    },
+    {
+      "name": "fall",
+      "days": [
+        [],
+        [
+          {
+            "type": "birthday",
+            "person": "Penny"
+          }
+        ],
+        [],
+        [],
+        [
+          {
+            "type": "birthday",
+            "person": "Elliott"
+          }
+        ],
+        [],
+        [],
+        [
+          {
+            "type": "other",
+            "name": "Blackberry Season"
+          }
+        ],
+        [
+          {
+            "type": "other",
+            "name": "Blackberry Season"
+          }
+        ],
+        [
+          {
+            "type": "other",
+            "name": "Blackberry Season"
+          }
+        ],
+        [
+          {
+            "type": "birthday",
+            "person": "Jodi"
+          },
+          {
+            "type": "other",
+            "name": "Blackberry Season"
+          }
+        ],
+        [],
+        [
+          {
+            "type": "birthday",
+            "person": "Abigail"
+          }
+        ],
+        [],
+        [
+          {
+            "type": "birthday",
+            "person": "Sandy"
+          }
+        ],
+        [
+          {
+            "type": "festival",
+            "name": "Stardew Valley Fair"
+          }
+        ],
+        [],
+        [
+          {
+            "type": "birthday",
+            "person": "Marnie"
+          }
+        ],
+        [],
+        [],
+        [
+          {
+            "type": "birthday",
+            "person": "Robin"
+          }
+        ],
+        [],
+        [],
+        [
+          {
+            "type": "birthday",
+            "person": "George"
+          }
+        ],
+        [],
+        [],
+        [
+          {
+            "type": "festival",
+            "name": "Spirit's Eve"
+          }
+        ],
+        []
+      ]
+    },
+    {
+      "name": "winter",
+      "days": [
+        [
+          {
+            "type": "birthday",
+            "person": "Krobus"
+          }
+        ],
+        [],
+        [
+          {
+            "type": "birthday",
+            "person": "Linus"
+          }
+        ],
+        [],
+        [],
+        [],
+        [
+          {
+            "type": "birthday",
+            "person": "Caroline"
+          }
+        ],
+        [
+          {
+            "type": "festival",
+            "name": "Festival of Ice"
+          }
+        ],
+        [],
+        [
+          {
+            "type": "birthday",
+            "person": "Sebastian"
+          }
+        ],
+        [],
+        [],
+        [],
+        [
+          {
+            "type": "birthday",
+            "person": "Harvey"
+          }
+        ],
+        [
+          {
+            "type": "festival",
+            "name": "Night Market"
+          }
+        ],
+        [
+          {
+            "type": "festival",
+            "name": "Night Market"
+          }
+        ],
+        [
+          {
+            "type": "birthday",
+            "person": "Wizard"
+          },
+          {
+            "type": "festival",
+            "name": "Night Market"
+          }
+        ],
+        [],
+        [],
+        [
+          {
+            "type": "birthday",
+            "person": "Evelyn"
+          }
+        ],
+        [],
+        [],
+        [
+          {
+            "type": "birthday",
+            "person": "Leah"
+          }
+        ],
+        [],
+        [
+          {
+            "type": "festival",
+            "name": "Feast of the Winter Star"
+          }
+        ],
+        [
+          {
+            "type": "birthday",
+            "person": "Clint"
+          }
+        ],
+        [],
+        []
+      ]
+    }
   ]
 }
