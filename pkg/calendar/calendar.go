@@ -34,6 +34,26 @@ func (c *Calendar) CurrentEvents() ([]Event, error) {
 	return c.CurrentSeason.GetEvents(c.CurrentDay)
 }
 
+func (c *Calendar) EventsSummary(events []Event) []string {
+	lines := []string{}
+
+	totalEvents := len(events)
+	if totalEvents < 1 {
+		lines = append(lines, "No events today")
+	} else {
+		plural := "s"
+		if totalEvents == 1 {
+			plural = ""
+		}
+		lines = append(lines, fmt.Sprintf("%d event%s today:", totalEvents, plural))
+		for _, event := range events {
+			lines = append(lines, fmt.Sprintf("- %s", event))
+		}
+	}
+
+	return lines
+}
+
 func (c *Calendar) DaySheet(lines ...string) string {
 	width := 40
 	height := 20
