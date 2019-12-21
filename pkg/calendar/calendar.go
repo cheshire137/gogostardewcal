@@ -8,44 +8,36 @@ import (
 
 type Calendar struct {
 	currentDay    int
-	currentSeason string
-	seasons       []*Season
+	currentSeason *Season
+	Seasons       []*Season `json:"seasons"`
 }
 
-func NewCalendar(pathToCalendar string, day int, season string) (*Calendar, error) {
-	seasons, err := loadCalendar(pathToCalendar)
+func NewCalendar(pathToCalendar string, day int, seasonName string) (*Calendar, error) {
+	calendar, err := loadCalendar(pathToCalendar)
 	if err != nil {
 		return nil, err
 	}
-	return &Calendar{currentDay: day, currentSeason: season, seasons: seasons}, nil
+
+	season, err := getSeasonByName(calendar.Seasons, seasonName)
+	if err != nil {
+		return nil, err
+	}
+
+	calendar.currentDay = day
+	calendar.currentSeason = season
+	return calendar, nil
 }
 
 func (c *Calendar) String() string {
 	return fmt.Sprintf("%s day %d", c.currentSeason, c.currentDay)
 }
 
-func loadCalendar(pathToCalendar string) ([]*Season, error) {
-	file, err := readCalendarFile(pathToCalendar)
-	if err != nil {
-		return nil, err
-	}
-	seasons := make([]*Season, len(file.Seasons))
-	for i, season := range file.Seasons {
-		seasons[i] = &season
-	}
-	return seasons, nil
-}
-
-type calendarFile struct {
-	Seasons []Season `json:"seasons"`
-}
-
-func readCalendarFile(pathToCalendar string) (*calendarFile, error) {
+func loadCalendar(pathToCalendar string) (*Calendar, error) {
 	bytes, err := ioutil.ReadFile(pathToCalendar)
 	if err != nil {
 		return nil, err
 	}
-	var data calendarFile
-	json.Unmarshal(bytes, &data)
-	return &data, nil
+	var calendar Calendar
+	json.Unmarshal(bytes, &calendar)
+	return &calendar, nil
 }
