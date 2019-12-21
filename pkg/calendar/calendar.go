@@ -72,6 +72,13 @@ func (c *Calendar) DaySheet(lines ...string) string {
 
 	for row := 0; row < height; row++ {
 		topOrBottomRow := row == 0 || row == height-1
+		wroteLine := false
+
+		if lineIndex < totalLines {
+			lineRunes = []rune(lines[lineIndex])
+		} else {
+			lineRunes = nil
+		}
 
 		for column := 0; column < width; column++ {
 			firstColumn := column == 0
@@ -90,23 +97,22 @@ func (c *Calendar) DaySheet(lines ...string) string {
 				}
 			}
 
-			leftContentIndex := column - leftPadding
-			if lineIndex < totalLines {
-				lineRunes = []rune(lines[lineIndex])
-			}
-			if (lineRunes != nil && leftContentIndex >= len(lineRunes)) || lineRunes == nil {
-				lineIndex++
-			}
+			contentIndex := column - leftPadding
 
-			if row == dateLineRow && column >= leftPadding && leftContentIndex < len(dateStrRunes) {
-				sb.WriteString(string(dateStrRunes[leftContentIndex]))
-			} else if row == contentStartRow && column >= leftPadding && lineRunes != nil && leftContentIndex < len(lineRunes) {
-				sb.WriteString(string(lineRunes[leftContentIndex]))
+			if row == dateLineRow && contentIndex >= 0 && contentIndex < len(dateStrRunes) {
+				sb.WriteString(string(dateStrRunes[contentIndex]))
+			} else if row >= contentStartRow && contentIndex >= 0 && lineRunes != nil && contentIndex < len(lineRunes) {
+				sb.WriteString(string(lineRunes[contentIndex]))
+				wroteLine = true
 			} else if !topOrBottomRow && !firstOrLastColumn {
 				sb.WriteString(" ")
 			}
 
 			if lastColumn {
+				if wroteLine {
+					lineIndex++
+					wroteLine = false
+				}
 				sb.WriteString("\n")
 			}
 		}
