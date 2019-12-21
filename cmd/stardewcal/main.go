@@ -49,6 +49,8 @@ func main() {
 	for _, event := range events {
 		fmt.Printf("- %s\n", event)
 	}
+
+	fmt.Println(calendar.DaySheet())
 }
 
 var seasons = []string{
