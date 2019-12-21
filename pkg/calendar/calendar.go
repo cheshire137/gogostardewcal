@@ -37,13 +37,16 @@ func (c *Calendar) DaySheet(lines ...string) string {
 	width := 40
 	height := 20
 	var sb strings.Builder
+	dateStr := fmt.Sprintf("%s %d", c.CurrentSeason, c.CurrentDay)
+	dateStrRunes := []rune(dateStr)
 
 	for row := 0; row < height; row++ {
 		topOrBottomRow := row == 0 || row == height-1
 
 		for column := 0; column < width; column++ {
+			firstColumn := column == 0
 			lastColumn := column == width-1
-			firstOrLastColumn := column == 0 || lastColumn
+			firstOrLastColumn := firstColumn || lastColumn
 
 			if topOrBottomRow && firstOrLastColumn {
 				sb.WriteString("#")
@@ -57,7 +60,9 @@ func (c *Calendar) DaySheet(lines ...string) string {
 				}
 			}
 
-			if !topOrBottomRow && !firstOrLastColumn {
+			if row == 1 && !firstColumn && column-1 < len(dateStrRunes) {
+				sb.WriteString(string(dateStrRunes[column-1]))
+			} else if !topOrBottomRow && !firstOrLastColumn {
 				sb.WriteString(" ")
 			}
 

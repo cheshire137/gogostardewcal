@@ -1,6 +1,9 @@
 package calendar
 
-import "fmt"
+import (
+	"fmt"
+	"strings"
+)
 
 type Season struct {
 	Name string            `json:"name"`
@@ -26,7 +29,7 @@ func (s *Season) GetEvents(day int) ([]Event, error) {
 }
 
 func (s *Season) String() string {
-	return s.Name
+	return strings.Title(s.Name)
 }
 
 func getSeasonByName(seasons []*Season, seasonName string) (*Season, error) {
