@@ -4,6 +4,7 @@ import (
 	"encoding/json"
 	"fmt"
 	"io/ioutil"
+	"math"
 	"strings"
 )
 
@@ -72,6 +73,8 @@ func (c *Calendar) DaySheet(lines ...string) string {
 			leftContentIndex := column - leftPadding
 			if lineIndex < totalLines {
 				lineRunes = []rune(lines[lineIndex])
+			}
+			if (lineRunes != nil && leftContentIndex >= len(lineRunes)) || lineRunes == nil {
 				lineIndex++
 			}
 
