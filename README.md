@@ -5,6 +5,8 @@ things you want to do each day in your Stardew Valley game, such
 as whose birthday it is so you can give them a gift, when the
 Night Market arrives, when the traveling merchant arrives, etc.
 
+![Screenshot](screenshot.png)
+
 ## How to develop
 
 I built this app using Go version 1.13.4.
