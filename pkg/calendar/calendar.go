@@ -7,8 +7,8 @@ import (
 )
 
 type Calendar struct {
-	currentDay    int
-	currentSeason *Season
+	CurrentDay    int
+	CurrentSeason *Season
 	Seasons       []*Season `json:"seasons"`
 }
 
@@ -23,13 +23,17 @@ func NewCalendar(pathToCalendar string, day int, seasonName string) (*Calendar, 
 		return nil, err
 	}
 
-	calendar.currentDay = day
-	calendar.currentSeason = season
+	calendar.CurrentDay = day
+	calendar.CurrentSeason = season
 	return calendar, nil
 }
 
+func (c *Calendar) CurrentEvents() ([]Event, error) {
+	return c.CurrentSeason.GetEvents(c.CurrentDay)
+}
+
 func (c *Calendar) String() string {
-	return fmt.Sprintf("%s day %d", c.currentSeason, c.currentDay)
+	return fmt.Sprintf("%s day %d", c.CurrentSeason, c.CurrentDay)
 }
 
 func loadCalendar(pathToCalendar string) (*Calendar, error) {

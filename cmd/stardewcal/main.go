@@ -28,6 +28,27 @@ func main() {
 	}
 
 	fmt.Println(calendar)
+
+	events, err := calendar.CurrentEvents()
+	if err != nil {
+		fmt.Println(err)
+		os.Exit(1)
+	}
+
+	totalEvents := len(events)
+	if totalEvents < 1 {
+		fmt.Println("No events today")
+		os.Exit(0)
+	}
+
+	plural := "s"
+	if totalEvents == 1 {
+		plural = ""
+	}
+	fmt.Printf("%d event%s today:\n", totalEvents, plural)
+	for _, event := range events {
+		fmt.Printf("- %s\n", event)
+	}
 }
 
 var seasons = []string{

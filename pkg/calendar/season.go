@@ -7,14 +7,26 @@ type Season struct {
 	Days [][]*calendarItem `json:"days"`
 }
 
-func (s *Season) String() string {
-	return s.Name
+func (s *Season) GetEvents(day int) ([]Event, error) {
+	if day < 1 || day > len(s.Days)+1 {
+		return nil, fmt.Errorf("Error: invalid day %d", day)
+	}
+	items := s.Days[day-1]
+	events := make([]Event, len(items))
+	for i, item := range items {
+		item.day = day
+		item.season = s.Name
+		event, err := item.Event()
+		if err != nil {
+			return nil, err
+		}
+		events[i] = event
+	}
+	return events, nil
 }
 
-type calendarItem struct {
-	Type   string `json:"type"`
-	Name   string `json:"name"`
-	Person string `json:"person"`
+func (s *Season) String() string {
+	return s.Name
 }
 
 func getSeasonByName(seasons []*Season, seasonName string) (*Season, error) {
