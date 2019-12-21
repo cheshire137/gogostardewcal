@@ -27,8 +27,6 @@ func main() {
 		os.Exit(1)
 	}
 
-	fmt.Println(calendar)
-
 	events, err := calendar.CurrentEvents()
 	if err != nil {
 		fmt.Println(err)
