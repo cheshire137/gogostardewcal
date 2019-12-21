@@ -42,9 +42,11 @@ func (c *Calendar) DaySheet(lines ...string) string {
 	leftPadding := 3
 	topPadding := 2
 	dateLineRow := topPadding
-	contentStartRow := dateLineRow + 2
-	lineIndex := 0
 	totalLines := len(lines)
+	numerator := float64((height - 1) - dateLineRow)
+	denominator := float64(totalLines)
+	contentStartRow := int(math.Round(numerator / denominator))
+	lineIndex := 0
 	var lineRunes []rune
 
 	for row := 0; row < height; row++ {
