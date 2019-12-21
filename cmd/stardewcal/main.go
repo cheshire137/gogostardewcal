@@ -4,14 +4,9 @@ import (
 	"errors"
 	"fmt"
 	"os"
-)
 
-var seasons = []string{
-	"spring",
-	"summer",
-	"fall",
-	"winter",
-}
+	"github.com/cheshire137/gogostardewcal/pkg/calendar"
+)
 
 func main() {
 	season, err := getSeason()
@@ -25,7 +20,21 @@ func main() {
 		fmt.Println(err)
 		os.Exit(1)
 	}
-	fmt.Printf("%s day %d\n", season, day)
+
+	calendar, err := calendar.NewCalendar("pkg/calendar/calendar.json", day, season)
+	if err != nil {
+		fmt.Println(err)
+		os.Exit(1)
+	}
+
+	fmt.Println(calendar)
+}
+
+var seasons = []string{
+	"spring",
+	"summer",
+	"fall",
+	"winter",
 }
 
 func getSeason() (string, error) {
