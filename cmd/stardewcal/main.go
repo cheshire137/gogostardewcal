@@ -1,6 +1,7 @@
 package main
 
 import (
+	"errors"
 	"fmt"
 	"os"
 )
@@ -13,6 +14,21 @@ var seasons = []string{
 }
 
 func main() {
+	season, err := getSeason()
+	if err != nil {
+		fmt.Println(err)
+		os.Exit(1)
+	}
+
+	day, err := getDay(season)
+	if err != nil {
+		fmt.Println(err)
+		os.Exit(1)
+	}
+	fmt.Printf("%s day %d\n", season, day)
+}
+
+func getSeason() (string, error) {
 	fmt.Println("What is the current season in Stardew Valley?")
 	fmt.Println("1) 🌸 spring")
 	fmt.Println("2) 🌻 summer")
@@ -23,17 +39,29 @@ func main() {
 	var seasonChoice int
 	_, err := fmt.Scanf("%d", &seasonChoice)
 	if err != nil {
-		fmt.Println(err)
-		os.Exit(1)
+		return "", err
 	}
 	if seasonChoice == 5 {
 		fmt.Println("Exiting...")
 		os.Exit(0)
 	}
 	if seasonChoice < 1 || seasonChoice > 4 {
-		fmt.Println("Error: invalid choice, please choose between 1-4")
-		os.Exit(1)
+		return "", errors.New("Error: invalid choice, please choose between 1-4")
 	}
-	season := seasons[seasonChoice-1]
-	fmt.Println(season)
+	return seasons[seasonChoice-1], nil
+}
+
+func getDay(season string) (int, error) {
+	fmt.Printf("What day of %s is it?\n", season)
+	fmt.Println("Enter 1-28:")
+	fmt.Printf("> ")
+	var dayChoice int
+	_, err := fmt.Scanf("%d", &dayChoice)
+	if err != nil {
+		return 0, err
+	}
+	if dayChoice < 1 || dayChoice > 28 {
+		return 0, errors.New("Error: invalid choice, please choose between 1-28")
+	}
+	return dayChoice, nil
 }
