@@ -30,7 +30,7 @@
     [
       {
         "type": "festival",
-        "person": "Egg Festival"
+        "name": "Egg Festival"
       }
     ],
     [
@@ -42,19 +42,19 @@
     [
       {
         "type": "other",
-        "person": "Salmonberry Season"
+        "name": "Salmonberry Season"
       }
     ],
     [
       {
         "type": "other",
-        "person": "Salmonberry Season"
+        "name": "Salmonberry Season"
       }
     ],
     [
       {
         "type": "other",
-        "person": "Salmonberry Season"
+        "name": "Salmonberry Season"
       }
     ],
     [
@@ -64,7 +64,7 @@
       },
       {
         "type": "other",
-        "person": "Salmonberry Season"
+        "name": "Salmonberry Season"
       }
     ],
     [],
@@ -80,7 +80,7 @@
     [
       {
         "type": "festival",
-        "person": "Flower Dance"
+        "name": "Flower Dance"
       }
     ],
     [],
@@ -127,13 +127,13 @@
     [
       {
         "type": "festival",
-        "person": "Luau"
+        "name": "Luau"
       }
     ],
     [
       {
         "type": "other",
-        "person": "Extra shells on beach"
+        "name": "Extra shells on beach"
       }
     ],
     [
@@ -143,13 +143,13 @@
       },
       {
         "type": "other",
-        "person": "Extra shells on beach"
+        "name": "Extra shells on beach"
       }
     ],
     [
       {
         "type": "other",
-        "person": "Extra shells on beach"
+        "name": "Extra shells on beach"
       }
     ],
     [],
@@ -188,7 +188,7 @@
     [
       {
         "type": "festival",
-        "person": "Dance of the Moonlight Jellies"
+        "name": "Dance of the Moonlight Jellies"
       }
     ]
   ],
@@ -213,19 +213,19 @@
     [
       {
         "type": "other",
-        "person": "Blackberry Season"
+        "name": "Blackberry Season"
       }
     ],
     [
       {
         "type": "other",
-        "person": "Blackberry Season"
+        "name": "Blackberry Season"
       }
     ],
     [
       {
         "type": "other",
-        "person": "Blackberry Season"
+        "name": "Blackberry Season"
       }
     ],
     [
@@ -235,7 +235,7 @@
       },
       {
         "type": "other",
-        "person": "Blackberry Season"
+        "name": "Blackberry Season"
       }
     ],
     [],
@@ -255,7 +255,7 @@
     [
       {
         "type": "festival",
-        "person": "Stardew Valley Fair"
+        "name": "Stardew Valley Fair"
       }
     ],
     [],
@@ -286,7 +286,7 @@
     [
       {
         "type": "festival",
-        "person": "Spirit's Eve"
+        "name": "Spirit's Eve"
       }
     ],
     []
@@ -317,7 +317,7 @@
     [
       {
         "type": "festival",
-        "person": "Festival of Ice"
+        "name": "Festival of Ice"
       }
     ],
     [],
@@ -339,13 +339,13 @@
     [
       {
         "type": "festival",
-        "person": "Night Market"
+        "name": "Night Market"
       }
     ],
     [
       {
         "type": "festival",
-        "person": "Night Market"
+        "name": "Night Market"
       }
     ],
     [
@@ -355,7 +355,7 @@
       },
       {
         "type": "festival",
-        "person": "Night Market"
+        "name": "Night Market"
       }
     ],
     [],
@@ -378,7 +378,7 @@
     [
       {
         "type": "festival",
-        "person": "Feast of the Winter Star"
+        "name": "Feast of the Winter Star"
       }
     ],
     [
