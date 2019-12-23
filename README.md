@@ -5,7 +5,7 @@ things you want to do each day in your Stardew Valley game, such
 as whose birthday it is so you can give them a gift, when the
 Night Market arrives, when the traveling merchant arrives, etc.
 
-![Screenshot](screenshot.png)
+![Screenshot](screenshot1.png)
 
 ## How to develop
 
