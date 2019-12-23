@@ -7,14 +7,22 @@ Night Market arrives, when the traveling merchant arrives, etc.
 
 ![Screenshot](screenshot1.png)
 
-## How to develop
+## How to run
 
 I built this app using Go version 1.13.4.
 
 ```sh
-go run cmd/stardewcal/main.go
+make
+bin/stardewcal
 ```
 
 It will prompt you for the current season and day in your Stardew Valley
 game, then tell you if any birthdays, festivals, or other notable events
 are happening that day.
+
+If you're modifying the app and want to build it and run it in one step,
+do:
+
+```sh
+go run cmd/stardewcal/main.go
+```
