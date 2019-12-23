@@ -46,8 +46,10 @@ func (c *Calendar) EventsSummary(events []Event) []string {
 			plural = ""
 		}
 		lines = append(lines, fmt.Sprintf("%d event%s today:", totalEvents, plural))
+		lines = append(lines, " ")
 		for _, event := range events {
 			lines = append(lines, fmt.Sprintf("- %s", event))
+			lines = append(lines, " ")
 		}
 	}
 
@@ -64,8 +66,8 @@ func (c *Calendar) DaySheet(lines ...string) string {
 	topPadding := 2
 	dateLineRow := topPadding
 	totalLines := len(lines)
-	numerator := float64((height - 1) - dateLineRow)
-	denominator := float64(totalLines)
+	numerator := float64((height - dateLineRow) - (totalLines - 1))
+	denominator := float64(2)
 	contentStartRow := int(math.Round(numerator / denominator))
 	lineIndex := 0
 	var lineRunes []rune
