@@ -56,11 +56,15 @@ func (c *Calendar) EventsSummary(events []Event) []string {
 	return lines
 }
 
+func (c *Calendar) SeasonEmoji() string {
+	return c.CurrentSeason.Emoji()
+}
+
 func (c *Calendar) DaySheet(lines ...string) string {
 	width := 40
 	height := 20
 	var sb strings.Builder
-	dateStr := fmt.Sprintf("%s %d", c.CurrentSeason, c.CurrentDay)
+	dateStr := fmt.Sprintf("%s %s %d", c.SeasonEmoji(), c.CurrentSeason, c.CurrentDay)
 	dateStrRunes := []rune(dateStr)
 	leftPadding := 3
 	topPadding := 2

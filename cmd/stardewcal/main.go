@@ -46,10 +46,10 @@ var seasons = []string{
 
 func getSeason() (string, error) {
 	fmt.Println("What is the current season in Stardew Valley?")
-	fmt.Println("1) 🌸 spring")
-	fmt.Println("2) 🌻 summer")
-	fmt.Println("3) 🍄 fall")
-	fmt.Println("4) ⛄️ winter")
+	fmt.Printf("1) %s spring\n", calendar.SPRING_EMOJI)
+	fmt.Printf("2) %s summer\n", calendar.SUMMER_EMOJI)
+	fmt.Printf("3) %s fall\n", calendar.FALL_EMOJI)
+	fmt.Printf("4) %s winter\n", calendar.WINTER_EMOJI)
 	fmt.Println("5) Exit")
 	fmt.Printf("> ")
 	var seasonChoice int

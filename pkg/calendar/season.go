@@ -5,9 +5,32 @@ import (
 	"strings"
 )
 
+const (
+	SPRING_EMOJI = "🌸"
+	SUMMER_EMOJI = "🌻"
+	FALL_EMOJI   = "🍄"
+	WINTER_EMOJI = "⛄️"
+)
+
 type Season struct {
 	Name string            `json:"name"`
 	Days [][]*calendarItem `json:"days"`
+}
+
+func (s *Season) Emoji() string {
+	if s.Name == "spring" {
+		return SPRING_EMOJI
+	}
+	if s.Name == "summer" {
+		return SUMMER_EMOJI
+	}
+	if s.Name == "fall" {
+		return FALL_EMOJI
+	}
+	if s.Name == "winter" {
+		return WINTER_EMOJI
+	}
+	return ""
 }
 
 func (s *Season) GetEvents(day int) ([]Event, error) {
