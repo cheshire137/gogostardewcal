@@ -30,6 +30,34 @@ func NewCalendar(pathToCalendar string, day int, seasonName string) (*Calendar, 
 	return calendar, nil
 }
 
+func (c *Calendar) NextDay() error {
+	if c.CurrentDay == 28 {
+		c.CurrentDay = 1
+		nextSeason, err := getNextSeason(c.CurrentSeason, c.Seasons)
+		if err != nil {
+			return err
+		}
+		c.CurrentSeason = nextSeason
+	} else {
+		c.CurrentDay++
+	}
+	return nil
+}
+
+func (c *Calendar) PreviousDay() error {
+	if c.CurrentDay == 1 {
+		c.CurrentDay = 28
+		previousSeason, err := getPreviousSeason(c.CurrentSeason, c.Seasons)
+		if err != nil {
+			return err
+		}
+		c.CurrentSeason = previousSeason
+	} else {
+		c.CurrentDay--
+	}
+	return nil
+}
+
 func (c *Calendar) CurrentEvents() ([]Event, error) {
 	return c.CurrentSeason.GetEvents(c.CurrentDay)
 }
@@ -139,4 +167,46 @@ func loadCalendar(pathToCalendar string) (*Calendar, error) {
 	var calendar Calendar
 	json.Unmarshal(bytes, &calendar)
 	return &calendar, nil
+}
+
+func getNextSeason(season *Season, seasons []*Season) (*Season, error) {
+	var lookingFor string
+	if season.Name == "spring" {
+		lookingFor = "summer"
+	} else if season.Name == "summer" {
+		lookingFor = "fall"
+	} else if season.Name == "fall" {
+		lookingFor = "winter"
+	} else if season.Name == "winter" {
+		lookingFor = "spring"
+	} else {
+		return nil, fmt.Errorf("Don't know next season after '%s'", season.Name)
+	}
+	for _, s := range seasons {
+		if s.Name == lookingFor {
+			return s, nil
+		}
+	}
+	return nil, fmt.Errorf("Could not find season '%s'", lookingFor)
+}
+
+func getPreviousSeason(season *Season, seasons []*Season) (*Season, error) {
+	var lookingFor string
+	if season.Name == "spring" {
+		lookingFor = "winter"
+	} else if season.Name == "summer" {
+		lookingFor = "spring"
+	} else if season.Name == "fall" {
+		lookingFor = "summer"
+	} else if season.Name == "winter" {
+		lookingFor = "fall"
+	} else {
+		return nil, fmt.Errorf("Don't know next season before '%s'", season.Name)
+	}
+	for _, s := range seasons {
+		if s.Name == lookingFor {
+			return s, nil
+		}
+	}
+	return nil, fmt.Errorf("Could not find season '%s'", lookingFor)
 }
