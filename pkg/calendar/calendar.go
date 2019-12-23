@@ -97,8 +97,9 @@ func (c *Calendar) DaySheet(lines ...string) string {
 	leftPadding := 3
 	topPadding := 2
 	dateLineRow := topPadding
+	borderRow := dateLineRow + 2
 	totalLines := len(lines)
-	numerator := float64((height - dateLineRow) - (totalLines - 1))
+	numerator := float64((height - borderRow) - (totalLines - 1))
 	denominator := float64(2)
 	contentStartRow := int(math.Round(numerator / denominator))
 	lineIndex := 0
@@ -138,6 +139,8 @@ func (c *Calendar) DaySheet(lines ...string) string {
 			} else if row >= contentStartRow && contentIndex >= 0 && lineRunes != nil && contentIndex < len(lineRunes) {
 				sb.WriteString(string(lineRunes[contentIndex]))
 				wroteLine = true
+			} else if row == borderRow && column > 0 && column < width-1 {
+				sb.WriteString("-")
 			} else if !topOrBottomRow && !firstOrLastColumn && (row != dateLineRow || contentIndex > len(dateStrRunes) || contentIndex < 0) {
 				sb.WriteString(" ")
 			}
