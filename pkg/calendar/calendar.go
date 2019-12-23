@@ -103,6 +103,7 @@ func (c *Calendar) DaySheet(lines ...string) string {
 	denominator := float64(2)
 	contentStartRow := int(math.Round(numerator / denominator))
 	lineIndex := 0
+	accountForEmojiWidth := c.CurrentSeason.Name != "winter"
 	var lineRunes []rune
 
 	for row := 0; row < height; row++ {
@@ -141,7 +142,7 @@ func (c *Calendar) DaySheet(lines ...string) string {
 				wroteLine = true
 			} else if row == borderRow && column > 0 && column < width-1 {
 				sb.WriteString("-")
-			} else if !topOrBottomRow && !firstOrLastColumn && (row != dateLineRow || contentIndex > len(dateStrRunes) || contentIndex < 0) {
+			} else if !topOrBottomRow && !firstOrLastColumn && (!accountForEmojiWidth || row != dateLineRow || contentIndex > len(dateStrRunes) || contentIndex < 0) {
 				sb.WriteString(" ")
 			}
 
