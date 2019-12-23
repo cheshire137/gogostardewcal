@@ -23,5 +23,9 @@ func (b *Birthday) Season() string {
 }
 
 func (b *Birthday) String() string {
+	lastChar := b.Person[len(b.Person)-1:]
+	if lastChar == "s" {
+		return fmt.Sprintf("%s' birthday", b.Person)
+	}
 	return fmt.Sprintf("%s's birthday", b.Person)
 }
